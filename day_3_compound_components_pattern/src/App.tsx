@@ -2,6 +2,7 @@ import { useState } from "react";
 // import Modal from "./messy/Modal";
 
 import Modal from "./with-pattern/Modal";
+import Accordian from "./with-pattern/Accordian";
 
 function App() {
     const [isOpen, setOpen] = useState(false);
@@ -9,10 +10,10 @@ function App() {
         setOpen((prev) => !prev);
     }
     return (
-        <div className="h-svh w-full bg-neutral-100">
+        <div className="h-svh w-full bg-neutral-100 pt-5">
             <button
                 type="button"
-                className="text-neutral-200 bg-red-600 rounded-lg py-2 px-4 text-sm font-medium outline-hidden cursor-pointer mx-auto block mt-5"
+                className="text-neutral-200 bg-red-600 rounded-lg py-2 px-4 text-sm font-medium outline-hidden cursor-pointer mx-auto block "
                 onClick={toggleModal}
             >
                 Delete Account
@@ -60,6 +61,16 @@ function App() {
                     </button>
                 </Modal.Footer>
             </Modal>
+            <Accordian>
+                <Accordian.Item title="Which payment methods are available?">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptatum, quas!
+                </Accordian.Item>
+                <Accordian.Item title="Which payment methods are available?">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptatum, quas!
+                </Accordian.Item>
+            </Accordian>
         </div>
     );
 }
