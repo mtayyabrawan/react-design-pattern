@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Modal from "./with-pattern/Modal";
 import Accordian from "./with-pattern/Accordian";
+import Card from "./task/Card";
 
 function App() {
     const [isOpen, setOpen] = useState(false);
@@ -71,6 +72,65 @@ function App() {
                     Voluptatum, quas!
                 </Accordian.Item>
             </Accordian>
+            <div className="grid grid-cols-3 gap-4 p-4">
+                <Card>
+                    <Card.Image
+                        src="/my_photo.png"
+                        alt="Muhammad Tayyab"
+                        className="aspect-3/4 object-cover"
+                    />
+                    <Card.Header>Muhammad Tayyab</Card.Header>
+                    <Card.Body>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus, nemo expedita nisi eveniet neque molestias saepe
+                        est vitae possimus autem facilis esse earum ab. Dicta
+                        maxime sit quasi omnis, totam hic vel, odio minima nobis
+                        perspiciatis accusamus doloremque sequi explicabo?
+                    </Card.Body>
+                    <Card.Footer>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </Card.Footer>
+                </Card>
+                <Card>
+                    <Card.Header>Muhammad Tayyab</Card.Header>
+                    <Card.Image
+                        src="/my_photo.png"
+                        alt="Muhammad Tayyab"
+                        className="aspect-square object-cover"
+                    />
+                    <Card.Body>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus, nemo expedita nisi eveniet neque molestias saepe
+                        est vitae possimus autem facilis esse earum ab. Dicta
+                        maxime sit quasi omnis, totam hic vel, odio minima nobis
+                        perspiciatis accusamus doloremque sequi explicabo?
+                    </Card.Body>
+                    <Card.Footer>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </Card.Footer>
+                </Card>
+                <Card>
+                    <Card.Header>Muhammad Tayyab</Card.Header>
+                    <Card.Image
+                        src="/my_photo.png"
+                        alt="Muhammad Tayyab"
+                        className="aspect-4/3 object-cover rotate-y-180"
+                    />
+                    <Card.Body>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus, nemo expedita nisi eveniet neque molestias saepe
+                        est vitae possimus autem facilis esse earum ab. Dicta
+                        maxime sit quasi omnis, totam hic vel, odio minima nobis
+                        perspiciatis accusamus doloremque sequi explicabo?
+                    </Card.Body>
+                    <Card.Footer>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </Card.Footer>
+                </Card>
+            </div>
         </div>
     );
 }
