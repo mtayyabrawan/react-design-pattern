@@ -2,6 +2,7 @@
 // import CarTracker from "./messy/car-tracker";
 
 import MouseTracker from "./with-pattern/mouse-tracker";
+import MouseTrackerChildren from "./with-pattern/mouse-tracker-children";
 
 function App() {
     return (
@@ -28,6 +29,27 @@ function App() {
                     </>
                 )}
             />
+            <h2 className="text-xl text-center my-6">With Children</h2>
+            <MouseTrackerChildren>
+                {({ x, y }) => (
+                    <>
+                        <span className="text-9xl">🚗</span>
+                        <span className="text-lg">
+                            ({x}x, {y}y)
+                        </span>
+                    </>
+                )}
+            </MouseTrackerChildren>
+            <MouseTrackerChildren>
+                {({ x, y }) => (
+                    <>
+                        <span className="text-9xl">🏍</span>
+                        <span className="text-lg">
+                            ({x}x, {y}y)
+                        </span>
+                    </>
+                )}
+            </MouseTrackerChildren>
         </div>
     );
 }
