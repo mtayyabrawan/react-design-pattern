@@ -3,7 +3,7 @@ import { useState, type MouseEvent, type ReactNode } from "react";
 function MouseTracker({
     render,
 }: {
-    render: (position: Record<"x" | "y", number>) => ReactNode;
+    render: (props: Record<"x" | "y", number>) => ReactNode;
 }) {
     const [position, setPosition] = useState<Record<"x" | "y", number>>({
         x: 0,
